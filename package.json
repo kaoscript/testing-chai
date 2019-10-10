@@ -1,0 +1,39 @@
+{
+	"name": "@kaoscript/chai",
+	"description": "Chai assertions for kaoscript",
+	"version": "0.0.0",
+	"author": {
+		"name": "Baptiste Augrain",
+		"email": "daiyam@zokugun.org"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kaoscript/testing-chai"
+	},
+	"bugs": {
+		"url": "https://github.com/kaoscript/testing-chai/issues"
+	},
+	"license": "MIT",
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://www.opensource.org/licenses/mit-license.php"
+		}
+	],
+	"engines": {
+		"node": ">= 4.5.0"
+	},
+	"main": "src/assertions.ks",
+	"dependencies": {
+		"chai": "4.2.0",
+		"deep-eql": "4.0.0"
+	},
+	"peerDependencies": {
+		"kaoscript": ">=0.9 <1"
+	},
+	"keywords": [
+		"kaoscript",
+		"chai",
+		"testing"
+	]
+}
