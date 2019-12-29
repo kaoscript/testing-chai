@@ -13,8 +13,8 @@ import 'deep-eql'
 
 use(func({Assertion}, {flag}) {
 	func comparator(a, b) { // {{{
-		if Type.isEnumMember(a) {
-			if Type.isEnumMember(b) {
+		if Type.isEnumInstance(a) {
+			if Type.isEnumInstance(b) {
 				return a.value == b.value && a.__ks_enum == b.__ks_enum
 			}
 			else if b is Number {
@@ -24,8 +24,8 @@ use(func({Assertion}, {flag}) {
 				return false
 			}
 		}
-		else if Type.isEnumMember(b) {
-			if Type.isEnumMember(a) {
+		else if Type.isEnumInstance(b) {
+			if Type.isEnumInstance(a) {
 				return a.value == b.value && a.__ks_enum == b.__ks_enum
 			}
 			else if a is Number {
