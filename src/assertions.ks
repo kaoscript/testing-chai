@@ -12,7 +12,7 @@ require|import 'chai' for assert, Assertion, config, expect, should, Should, use
 import 'deep-eql'
 
 use(func({Assertion}, {flag}) {
-	func comparator(a, b) { // {{{
+	func comparator(a?, b?) { // {{{
 		if Type.isEnumInstance(a) {
 			if Type.isEnumInstance(b) {
 				return a.value == b.value && a.__ks_enum == b.__ks_enum
@@ -40,7 +40,7 @@ use(func({Assertion}, {flag}) {
 		}
 	} // }}}
 
-	func assertEql(obj, msg = null) { // {{{
+	func assertEql(obj, msg? = null) { // {{{
 		if msg != null {
 			flag(this, 'message', msg)
 		}
